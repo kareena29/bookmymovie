@@ -20,9 +20,8 @@
                 <div class="row mb-2">
 
                     <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item" style="font-size: 25px;"><a href="#">Movies Details </a></li>
                         </ol>
                     </div>
                 </div>
@@ -35,11 +34,9 @@
             <!-- Default box -->
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Title</h3>
-
 
                         <div class="text-center">
-                            <a class='col-lg-offset-5 btn btn-success' href="{{route('movie.create')}}"> Add New post</a>
+                            <a class='col-lg-offset-5 btn btn-success' href="{{route('movie.create')}}"> Add New Movie</a>
                         </div>
 
                     <div class="card-tools">
@@ -67,6 +64,8 @@
                                     <th>Release Year</th>
                                     <th>Runtime</th>
                                     <th>Cast</th>
+                                    <th></th>
+                                    <th></th>
                                 </tr>
                                 </thead>
                                 <tbody>

@@ -11,7 +11,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Text Editors
+                Movie Add
                 <small>Advanced form element</small>
             </h1>
 
@@ -69,8 +69,8 @@
 
 
                                 <div class="form-check">
-                                    <input type="checkbox" name="status"  value="1" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">Treading</label>
+                                    <input type="checkbox" name="status"  value="1" class="form-check-input" id="exampleCheck1">Trending<br><br>
+{{--                                    <label class="form-check-label" for="exampleCheck1"></label>--}}
                                 </div>
 
                                 <div class="form-group">

@@ -2,7 +2,7 @@
 /shelf/
 /workspace.xml
 # Datasource local storage ignored files
-/../../../../../../:\xampp\htdocs\Laravel\bookmymovie\.idea/dataSources/
+/../../../../../:\XAMPP\htdocs\movie_system\.idea/dataSources/
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/

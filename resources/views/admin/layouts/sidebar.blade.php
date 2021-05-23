@@ -1,35 +1,45 @@
-<aside class="main-sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
-        <!-- Sidebar user panel -->
-        <div class="user-panel">
-            <div class="pull-left image">
+<aside class="main-sidebar sidebar-dark-primary elevation-4 " id="offcanvas">
+
+        <span class="brand-text font-weight-light" style="color:white; font-size: 25px;font-weight: bold; margin: 10px;">MovieWorld</span>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+{{--                <img src="dist/img/shruti.jpg" class="img-circle elevation-2"  alt="User Image">--}}
                 <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
             </div>
-            <div class="pull-left info">
-                <p>Kareena Vaghela</p>
-
+            <div class="info">
+                <a href="#" class="d-block" style="font-weight: bold;font-size: 10px">Kareena Vaghela</a>
             </div>
         </div>
-    
-        <!-- sidebar menu: : style can be found in sidebar.less -->
-        <ul class="sidebar-menu">
-            <li class="header">MAIN NAVIGATION</li>
-            <li class="active treeview">
-                <a href="#">
-                    <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-                    <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li class="active"><a  href="{{route('movie.index')}}"><i class="fa fa-circle-o"></i>Movies</a></li>
-                    <li><a href="{{route('cast.index')}}"><i class="fa fa-circle-o"></i> Casts</a></li>
-                </ul>
-            </li>
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <!-- Add icons to the links using the .nav-icon class
+                     with font-awesome or any other icon font library -->
+                <li class="header" style="font-size: 18px;color: #cccccc;">DASHBOARD</li>
+                <li class="nav-item menu-open">
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('movie.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p style="color:#1aa67d;font-size: 15px">Movies</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('cast.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p style="color:#1aa67d;font-size: 15px">Cast</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
 
 
+            </ul>
+        </nav>
 
-
+    </div>
     <!-- /.sidebar -->
 </aside>

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\movie;
+use App\Models\Movie;
 use Illuminate\Http\Request;
 
 class movieController extends Controller
@@ -14,7 +14,7 @@ class movieController extends Controller
      */
     public function index()
     {
-        $movies = movie::all();
+        $movies = Movie::all();
         return view('admin/Movies/show',compact('movies'));
     }
 
@@ -36,6 +36,7 @@ class movieController extends Controller
      */
     public function store(Request $request)
     {
+        //dd($request);
         $this->validate($request,[
            'title'  => 'required',
             'overview' =>'required',
@@ -44,9 +45,13 @@ class movieController extends Controller
             'poster' =>'required',
             'cast' =>'required',
         ]);
+
         if($request->hasFile('poster')){
-            $imageName = $request->poster->store('public');
+            $imageName ="/img/".$request->poster->getClientOriginalName();
         }
+//        if($request->hasFile('poster')){
+//            $imageName = $request->poster->store('public');
+//        }
         $movie = new movie;
         $movie->title = $request->title;
         $movie->overview = $request->overview;
@@ -67,7 +72,8 @@ class movieController extends Controller
      */
     public function show($id)
     {
-        //
+        $movie = movie::where('id',$id)->first();
+        return view('user.movie_details',compact('movie'));
     }
 
     /**
@@ -100,8 +106,11 @@ class movieController extends Controller
             'poster' =>'required',
             'cast' =>'required',
         ]);
+//        if($request->hasFile('poster')){
+//            $imageName = $request->poster->store('public');
+//        }
         if($request->hasFile('poster')){
-            $imageName = $request->poster->store('public');
+            $imageName ="/img/".$request->poster->getClientOriginalName();
         }
         $movie = movie::find($id);
         $movie->poster= $imageName;
@@ -123,7 +132,7 @@ class movieController extends Controller
      */
     public function destroy($id)
     {
-        movie::where('id',$id)->delete();
+        Movie::where('id',$id)->delete();
         return redirect()->back();
     }
 }

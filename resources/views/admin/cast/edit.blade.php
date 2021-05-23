@@ -13,7 +13,6 @@
         <section class="content-header">
             <h1>
                 Text Editors
-                <small>Advanced form element</small>
             </h1>
 
         </section>
@@ -26,7 +25,7 @@
                     <!-- /.box -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Titles</h3>
+                            <h3 class="card-title">Cast</h3>
                         </div>
 
                         @if(count($errors) >0)

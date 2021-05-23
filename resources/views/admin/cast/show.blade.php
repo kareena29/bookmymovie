@@ -20,8 +20,8 @@
                 <div class="row mb-2">
 
                     <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <ol class="breadcrumb ">
+                            <li class="breadcrumb-item" style="font-size: 25px"><a href="#">Cast Details</a></li>
 
                         </ol>
                     </div>
@@ -35,11 +35,11 @@
             <!-- Default box -->
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Title</h3>
+{{--                    <h3 class="card-title">Cast</h3>--}}
 
 
                     <div class="text-center">
-                        <a class='col-lg-offset-5 btn btn-success' href="{{route('cast.create')}}"> Add New post</a>
+                        <a class='col-lg-offset-5 btn btn-success' href="{{route('cast.create')}}"> Add New Cast</a>
                     </div>
 
                     <div class="card-tools">
@@ -66,6 +66,8 @@
                                     <th>Bio</th>
                                     <th>Birth Date</th>
                                     <th>List of Movies</th>
+                                    <th></th>
+                                    <th></th>
 
                                 </tr>
                                 </thead>
